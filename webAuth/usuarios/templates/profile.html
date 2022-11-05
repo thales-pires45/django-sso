@@ -1,0 +1,31 @@
+{% estende 'base.html'%}
+{% bloco titulo%} Perfil | Garagem{% endblock titulo%}
+{% bloco conteudo%}
+{% carga estática%}
+    <divclass="cover-container d-flex h-100 p-3 mx-auto flex-coluna">
+        <h1 class="cover-heading">Perfil</h1>
+        <div class='clearfix'>
+          <classe div='float-left'>
+            <imgsrc="{{{session.userinfo.picture}}"alt="..." class="círculo arredondado">
+          </Div>
+          <classe div='float-right'>
+            <imgsrc="{% estático 'images/garagem-icon.png'%}"alt="..." class="rounded-circle"width="42.7%"height="auto">
+          </Div>
+        </Div>
+        <Div>
+          <p></p>
+        </Div>
+        <divclass="card text-dark text-left"style='acoldding:10px'>
+            <Div>
+                <Div>
+                  <h4class='text center'>Logado como<strong>{{session.userinfo.name}}</strong></h4>
+                </Div>
+                <Div>
+                  <div><pre>{{pretty}}</pre></div>
+                </Div>
+            </Div>
+        </Div>
+        <p></p>
+        <a href="/logout"class="btn btn-lg btn-secondary">Sair</a>
+    </Div>
+{% endblock conteudo%}
